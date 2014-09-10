@@ -1,0 +1,155 @@
+object Despertador: TDespertador
+  Left = 238
+  Height = 220
+  Top = 183
+  Width = 154
+  AutoSize = True
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Despertador'
+  ClientHeight = 220
+  ClientWidth = 154
+  OnClose = FormClose
+  Position = poDefault
+  LCLVersion = '0.9.28.2'
+  Visible = True
+  object SpeedButton1: TSpeedButton
+    Left = 0
+    Height = 32
+    Top = 136
+    Width = 152
+    Caption = 'Música'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = SpeedButton1Click
+  end
+  object Label1: TLabel
+    Left = 5
+    Height = 16
+    Top = 6
+    Width = 45
+    Caption = 'Volume:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 5
+    Height = 16
+    Top = 199
+    Width = 27
+    Caption = 'Hora'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 79
+    Height = 16
+    Top = 200
+    Width = 40
+    Caption = 'Minuto'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 48
+    Height = 16
+    Top = 48
+    Width = 58
+    Caption = 'Hora Atual'
+    ParentColor = False
+  end
+  object TrackBar1: TTrackBar
+    Left = 0
+    Height = 24
+    Top = 24
+    Width = 153
+    Max = 64000
+    OnChange = TrackBar1Change
+    Position = 32768
+    TabOrder = 0
+  end
+  object CheckBox1: TCheckBox
+    Left = 36
+    Height = 19
+    Top = 88
+    Width = 87
+    Caption = 'Ligar Alarme'
+    OnChange = CheckBox1Change
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 0
+    Height = 25
+    Top = 112
+    Width = 76
+    Caption = 'Tocar'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 76
+    Height = 25
+    Top = 112
+    Width = 76
+    Caption = 'Parar'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object txtRelogio: TEdit
+    Left = 5
+    Height = 23
+    Top = 64
+    Width = 140
+    Enabled = False
+    TabOrder = 4
+  end
+  object txtHora: TEdit
+    Left = 5
+    Height = 23
+    Top = 175
+    Width = 65
+    MaxLength = 2
+    OnChange = txtHoraChange
+    TabOrder = 5
+  end
+  object txtMinuto: TEdit
+    Left = 79
+    Height = 23
+    Top = 175
+    Width = 68
+    MaxLength = 2
+    OnExit = txtMinutoExit
+    TabOrder = 6
+  end
+  object OpenDialog1: TOpenDialog
+    InitialDir = 'C:\Users\erick\Documents\Faculdade\3º Semestre\Prog 1\ad2\projeto\'
+    Options = [ofExtensionDifferent, ofEnableSizing, ofViewDetail]
+    left = 16
+    top = 144
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 105
+    top = 144
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Timer2Timer
+    left = 136
+    top = 144
+  end
+  object Process1: TProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 112
+    top = 8
+  end
+end
